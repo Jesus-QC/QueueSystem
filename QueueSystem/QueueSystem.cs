@@ -29,11 +29,11 @@ namespace QueueSystem
 
         private void OnPreAuthenticating(PreAuthenticatingEventArgs ev)
         {
-            Log.Info(ev.UserId + " >> a");
-            Log.Info(ev.ServerFull + " " + !ReservedSlot.HasReservedSlot(ev.UserId));
+            if (ev.IsAllowed || !ev.ServerFull || ReservedSlot.HasReservedSlot(ev.UserId))
+                return;
             
-            if(ev.ServerFull && !ReservedSlot.HasReservedSlot(ev.UserId))
-                ev.Delay(4, true);
+            ev.IsAllowed = true;
+            ev.Delay(4, true);
         }
     }
 }
