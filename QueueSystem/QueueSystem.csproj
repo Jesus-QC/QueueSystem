@@ -66,6 +66,9 @@
         <Reference Include="Exiled.Updater, Version=3.1.1.0, Culture=neutral, processorArchitecture=Amd64">
           <HintPath>..\packages\EXILED.5.2.2\lib\net472\Exiled.Updater.dll</HintPath>
         </Reference>
+        <Reference Include="Mirror">
+          <HintPath>..\..\..\Dependencies\Mirror.dll</HintPath>
+        </Reference>
         <Reference Include="NorthwoodLib, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
           <HintPath>..\packages\EXILED.5.2.2\lib\net472\NorthwoodLib.dll</HintPath>
         </Reference>
